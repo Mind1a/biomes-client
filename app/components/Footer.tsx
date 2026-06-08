@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -17,23 +18,24 @@ export default function Footer() {
           "
         >
           {/* Biomes logo */}
-          <Image
-            src="/footer/biomes-logo.png"
-            alt="ბიომები"
-            width={220}
-            height={48}
-            priority
-            className="
-              object-contain
+<Link href="/">
+  <Image
+    src="/footer/biomes-logo.png"
+    alt="ბიომები"
+    width={220}
+    height={48}
+    priority
+    className="
+      object-contain
 
-              w-[140px] h-[30px]
+      w-[140px] h-[30px]
 
-              md:w-[140px] md:h-[30px]
+      md:w-[140px] md:h-[30px]
 
-              lg:w-[220px] lg:h-[48px]
-            "
-          />
-
+      lg:w-[220px] lg:h-[48px]
+    "
+  />
+</Link>
           {/* Right logos */}
           <div
             className="
@@ -46,37 +48,49 @@ export default function Footer() {
               lg:w-[146px] lg:h-[68px] lg:gap-[24px]
             "
           >
-            <Image
-              src="/footer/ilia-logo.png"
-              alt="Ilia State University"
-              width={71}
-              height={68}
-              className="
-                object-contain
+            <a
+  href="https://iliauni.edu.ge"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Image
+    src="/footer/ilia-logo.png"
+    alt="Ilia State University"
+    width={71}
+    height={68}
+    className="
+      object-contain
 
-                w-[41.96px] h-[40px]
+      w-[41.96px] h-[40px]
 
-                md:w-[41.96px] md:h-[40px]
+      md:w-[41.96px] md:h-[40px]
 
-                lg:w-[71px] lg:h-[68px]
-              "
-            />
+      lg:w-[71px] lg:h-[68px]
+    "
+  />
+</a>
 
-            <Image
-              src="/footer/unilab-logo.png"
-              alt="Unilab"
-              width={51}
-              height={69}
-              className="
-                object-contain
+            <a
+  href="https://unilab.iliauni.edu.ge"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Image
+    src="/footer/unilab-logo.png"
+    alt="Unilab"
+    width={51}
+    height={69}
+    className="
+      object-contain
 
-                w-[29.97px] h-[40px]
+      w-[29.97px] h-[40px]
 
-                md:w-[29.97px] md:h-[40px]
+      md:w-[29.97px] md:h-[40px]
 
-                lg:w-[51.25px] lg:h-[69.49px]
-              "
-            />
+      lg:w-[51.25px] lg:h-[69.49px]
+    "
+  />
+</a>
           </div>
         </div>
 
