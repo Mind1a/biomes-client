@@ -36,3 +36,11 @@ body {
 .firago {
   font-family: "FiraGO", sans-serif;
 }
+
+@layer utilities {
+  .font-case {
+    -moz-font-feature-settings: "case";
+    -webkit-font-feature-settings: "case";
+    font-feature-settings: "case";
+  }
+}
