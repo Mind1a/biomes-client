@@ -6,26 +6,16 @@ export default function Footer() {
     <footer className="firago w-full bg-[#3F3F3F]">
       <div className="mx-auto w-full max-w-[1440px]">
         {/* Top green area */}
-        <div
-          className="
-            flex items-center justify-between bg-[#008645]
-
-            h-[104px] px-[16px] py-[32px]
-
-            md:h-[72px] md:px-[16px] md:py-[16px]
-
-            lg:h-[136px] lg:px-[24px] lg:py-[27px]
-          "
-        >
+        <div className="flex items-center justify-between bg-[#008645] h-[104px] px-[16px] py-[32px] md:h-[72px] md:px-[16px] md:py-[16px] lg:h-[136px] lg:px-[24px] lg:py-[27px]">
           {/* Biomes logo */}
-<Link href="/">
-  <Image
-    src="/footer/biomes-logo.png"
-    alt="ბიომები"
-    width={220}
-    height={48}
-    priority
-    className="
+          <Link href="/">
+            <Image
+              src="/footer/biomes-logo.png"
+              alt="ბიომები"
+              width={220}
+              height={48}
+              priority
+              className="
       object-contain
 
       w-[140px] h-[30px]
@@ -34,8 +24,8 @@ export default function Footer() {
 
       lg:w-[220px] lg:h-[48px]
     "
-  />
-</Link>
+            />
+          </Link>
           {/* Right logos */}
           <div
             className="
@@ -49,16 +39,16 @@ export default function Footer() {
             "
           >
             <a
-  href="https://iliauni.edu.ge"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Image
-    src="/footer/ilia-logo.png"
-    alt="Ilia State University"
-    width={71}
-    height={68}
-    className="
+              href="https://iliauni.edu.ge"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/footer/ilia-logo.png"
+                alt="Ilia State University"
+                width={71}
+                height={68}
+                className="
       object-contain
 
       w-[41.96px] h-[40px]
@@ -67,20 +57,20 @@ export default function Footer() {
 
       lg:w-[71px] lg:h-[68px]
     "
-  />
-</a>
+              />
+            </a>
 
             <a
-  href="https://unilab.iliauni.edu.ge"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Image
-    src="/footer/unilab-logo.png"
-    alt="Unilab"
-    width={51}
-    height={69}
-    className="
+              href="https://unilab.iliauni.edu.ge"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/footer/unilab-logo.png"
+                alt="Unilab"
+                width={51}
+                height={69}
+                className="
       object-contain
 
       w-[29.97px] h-[40px]
@@ -89,8 +79,8 @@ export default function Footer() {
 
       lg:w-[51.25px] lg:h-[69.49px]
     "
-  />
-</a>
+              />
+            </a>
           </div>
         </div>
 

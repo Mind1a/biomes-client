@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header
       aria-label="მთავარი ნავიგაცია"
-      className="max-w-97.5 md:max-w-208.5 lg:max-w-348 max-h-13.75 md:max-h-17 lg:max-h-15.5 flex justify-between mx-auto mt-8"
+      className="max-w-97.5 md:max-w-208.5 lg:max-w-348 max-h-13.75 md:max-h-17 lg:max-h-15.5 flex justify-between mx-auto mt-8 w-full"
     >
       {/*//!Image Section */}
       <div className=" max-w-35 md:max-w-41.25 lg:max-w-55 ">
