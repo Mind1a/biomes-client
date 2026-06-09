@@ -1,9 +1,10 @@
-import Header from "@/features/common/header/components/Header";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div>
-      <Header />
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-1" />
+      <Footer />
     </div>
   );
 }
