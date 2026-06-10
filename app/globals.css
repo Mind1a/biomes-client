@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -43,4 +43,4 @@ body {
     -webkit-font-feature-settings: "case";
     font-feature-settings: "case";
   }
-}
+} */
