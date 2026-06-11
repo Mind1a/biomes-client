@@ -5,11 +5,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { useIsActive } from "../hooks/navLinksHooks";
 import BurgerMenu from "./BurgerMenu";
+import SearchInput from "./SearchInput";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
-  const isActive = useIsActive;
+  const isActive = useIsActive();
 
   return (
     <>
@@ -65,24 +66,7 @@ const Header = () => {
               />
             </button>
           ) : (
-            <div className="relative max-w-82.5 w-full">
-              <input
-                type="text"
-                placeholder="ძებნა..."
-                className="w-full h-15 rounded-full bg-white text-[#666666] pl-6 pr-16 outline-none"
-              />
-              <button
-                onClick={() => setIsSearchOpen((prev) => !prev)}
-                className="absolute right-2 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#008645] flex items-center justify-center"
-              >
-                <Image
-                  src="/images/svgs/Search.svg"
-                  alt="ძებნა"
-                  width={24}
-                  height={24}
-                />
-              </button>
-            </div>
+            <SearchInput setIsSearchOpen={setIsSearchOpen} />
           )}
         </div>
         {/* //!BurgerMenu Section */}

@@ -4,11 +4,12 @@ import Image from "next/image";
 import { navLinks } from "../data/navLinksData";
 import Link from "next/link";
 import { BurgerMenuProps } from "../types/navLinksTypes";
+import SearchInput from "./SearchInput";
 
 const BurgerMenu = ({ setIsMenuOpen, isActive }: BurgerMenuProps) => {
   return (
     <div className="fixed inset-0 z-50 bg-[#F0F0F0] flex flex-col p-6 lg:hidden">
-      <div className="max-w-89.5 mx-auto">
+      <div className="max-w-89.5 md:max-w-200.5 w-full mx-auto">
         <div className="flex justify-end">
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -19,31 +20,17 @@ const BurgerMenu = ({ setIsMenuOpen, isActive }: BurgerMenuProps) => {
               alt="მენიუს დახურვის ხატი"
               width={32}
               height={32}
+              className="w-8 h-8 md:w-12 md:h-12"
             />
           </button>
         </div>
 
-        <div className="relative max-w-89.5 w-full mt-16">
-          <input
-            type="text"
-            placeholder="ძებნა..."
-            className="w-full h-15 rounded-full bg-white text-[#666666] pl-6 pr-16 outline-none"
-          />
-          <button className="absolute right-2 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#008645] flex items-center justify-center">
-            <Image
-              src="/images/svgs/Search.svg"
-              alt="ძებნა"
-              width={24}
-              height={24}
-            />
-          </button>
-        </div>
-
-        <ul className="flex flex-col gap-4 mt-12">
+        <SearchInput />
+        <ul className="flex flex-col gap-4 md:gap-3 mt-12 md:mt-30">
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className={`flex gap-2.5 w-full max-w-89.5 pl-6 pt-3.5 pb-3.5 rounded-[48px] ${
+              className={`flex gap-2.5 w-full max-w-89.5 md:max-w-200.5 pl-6 pt-3.5 pb-3.5 md:pt-6 md:pb-6 rounded-[48px] ${
                 isActive(link.href) && "bg-[#008645]"
               }`}
             >
@@ -56,7 +43,7 @@ const BurgerMenu = ({ setIsMenuOpen, isActive }: BurgerMenuProps) => {
               <Link
                 href={link.href}
                 onClick={() => setIsMenuOpen((prev) => !prev)}
-                className={`text-xl ${
+                className={`text-xl md:text-[28px] ${
                   isActive(link.href)
                     ? "text-white font-bold"
                     : "text-[#666666] font-regular"

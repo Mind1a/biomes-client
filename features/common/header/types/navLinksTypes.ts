@@ -10,3 +10,7 @@ export type BurgerMenuProps = {
   setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
   isActive: (href: string) => boolean;
 };
+
+export type SearchInputProps = {
+  setIsSearchOpen?: Dispatch<SetStateAction<boolean>>;
+};
