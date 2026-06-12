@@ -39,6 +39,9 @@ const BurgerMenu = ({ setIsMenuOpen, isActive }: BurgerMenuProps) => {
                 alt="ნავიგაციის ლოგოები"
                 width={21}
                 height={22}
+                className={`filter brightness-0 ${
+                  isActive(link.href) ? "invert" : "invert-40"
+                }`}
               />
               <Link
                 href={link.href}
