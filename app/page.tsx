@@ -1,5 +1,5 @@
 import Header from "@/features/common/header/components/Header";
-import Footer from "./components/Footer";
+import Footer from "@/features/footer/components/Footer";
 
 export default function Home() {
   return (
