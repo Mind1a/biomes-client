@@ -14,7 +14,7 @@ const SearchInput = ({ setIsSearchOpen }: SearchInputProps) => {
         className="absolute right-2 top-1/2 -translate-y-1/2 w-11 h-11 md:w-14 md:h-14 lg:w-11 lg:h-11 rounded-full bg-[#008645] flex items-center justify-center"
       >
         <Image
-          src="/images/svgs/Search.svg"
+          src="/assets/images/headerImages/svgs/Search.svg"
           alt="ძებნა"
           width={24}
           height={24}

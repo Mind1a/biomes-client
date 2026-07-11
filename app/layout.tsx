@@ -4,6 +4,7 @@ import "./globals.css";
 import { QueryProvider } from "@/features/query/QueryProvider";
 import Header from "@/features/common/header/components/Header";
 import { tbcContracticaCaps } from "@/public/assets/fonts/fonts";
+import Footer from "@/features/footer/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <QueryProvider>
           <Header />
           {children}
+          <Footer />
         </QueryProvider>
       </body>
     </html>
