@@ -1,11 +1,11 @@
 import Header from "@/features/common/header/components/Header";
-import Footer from "./components/Footer";
+import Footer from "@/features/footer/components/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-[#F0F0F0]">
       <Header />
-      
+
       <main className="flex-1" />
       <Footer />
     </div>
