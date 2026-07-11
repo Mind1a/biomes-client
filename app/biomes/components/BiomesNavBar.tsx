@@ -152,6 +152,7 @@ export default function BiomesNavBar() {
               return (
                 <Link
                   key={biome.id}
+                  onClick={closeSidebar}
                   href={`/biomes/${biome.id}`}
                   className={`flex items-start justify-between gap-2 py-3 px-4 rounded-2xl transition-all duration-200 group ${isActive
                     ? "bg-gray-50 text-[#024902] font-semibold shadow-xs"
