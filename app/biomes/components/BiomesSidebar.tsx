@@ -2,7 +2,7 @@
 
 import React, { useCallback } from "react";
 import { useRouter, useParams } from "next/navigation";
-import BiomesMiniMap from "./BiomesMiniMap";
+import Map from "@/features/common/biomeMap/components/Map";
 import BiomesNavBar from "./BiomesNavBar";
 
 
@@ -24,8 +24,8 @@ export default function BiomesSidebar() {
             გავრცელება მსოფლიოში
           </span>
         </div>
-        <BiomesMiniMap
-          onBiomeSelect={handleBiomeSelect}
+        <Map
+          onBiomeSelect={(id, e) => handleBiomeSelect(id)}
           selectedBiomes={activeId ? [activeId] : []}
         />
       </div>
