@@ -1,20 +1,29 @@
+"use client"
 import { useEffect, useRef } from "react";
 import gsap from "gsap"
+import { BiomesMapType } from "../types/MapType";
 
-interface BiomesMapProps {
-  onBiomeSelect: (id: string, e: React.MouseEvent) => void;
-  selectedBiomes: string[];
-}
-
-export default function BiomesMiniMap({ onBiomeSelect, selectedBiomes }: BiomesMapProps) {
+export default function Map({ onBiomeSelect, selectedBiomes }: BiomesMapType) {
   const svgRef = useRef<SVGSVGElement>(null);
   useEffect(() => {
-    if (!svgRef.current) return;
-    gsap.fromTo(svgRef.current,
-      { opacity: 0, scale: 0.98 },
-      { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out", clearProps: "all" }
-    );
-  }, []);
+    if (svgRef.current) {
+      const biomes = svgRef.current.querySelectorAll("g[id]")
+      gsap.fromTo(biomes,
+        {
+          opacity: 0,
+          scale: 1.1,
+          transformOrigin: "center center"
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1.5,
+          ease: "power1.out",
+          transformOrigin: "center center"
+        }
+      );
+    }
+  }, [])
   return (
     <>
       <svg ref={svgRef} className="w-full h-auto" viewBox="0 0 534 257" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
