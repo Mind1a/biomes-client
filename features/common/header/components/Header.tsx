@@ -14,7 +14,7 @@ const Header = () => {
     <>
       <header
         aria-label="მთავარი ნავიგაცია"
-        className="max-w-97.5 md:max-w-208.5 lg:max-w-348 h-13.75 md:h-17 lg:h-15.5 justify-between mx-auto mt-8 w-full items-center flex"
+        className="max-w-97.5 md:max-w-208.5 lg:max-w-348 h-13.75 md:h-17 lg:h-15.5 justify-between mx-auto my-6 w-full items-center flex px-3"
       >
         {/*//!Image Section */}
         <div className="shrink-0">
@@ -30,7 +30,7 @@ const Header = () => {
         </div>
         {/*//!Navigation Section */}
         <nav className="hidden h-15.5 w-full max-w-135.75 items-center rounded-[74px] bg-white pl-2 lg:flex">
-          <ul className="w-full flex items-center max-w-127 h-11.5 justify-between">
+          <ul className="w-full flex items-center max-w-130 h-11.5 justify-between">
             {navLinks.map((link) => {
               const active = isActive(link.href);
 
@@ -38,7 +38,7 @@ const Header = () => {
                 <li key={link.id}>
                   <Link
                     aria-current={active ? "page" : undefined}
-                    className={`flex h-11.5 items-center rounded-[74px] px-4 transition-colors ${
+                    className={`flex items-center rounded-[74px] p-4 transition-colors ${
                       active
                         ? "bg-[#008645] font-bold text-white"
                         : "font-light text-[#666666]"

@@ -12,7 +12,7 @@ export const navLinks: NavLink[] = [
   {
     id: 2,
     label: "გამოყენების წესები",
-    href: "/terms",
+    href: "/terms-of-use",
     img: `${HEADER_ICON_PATH}/File.svg`,
   },
   {

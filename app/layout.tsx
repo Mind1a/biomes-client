@@ -33,8 +33,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <QueryProvider>
-          <Header />
-          {children}
+          <div className="bg-white">
+            <Header />
+          </div>
+          <main className="flex-1">{children}</main>
           <Footer />
         </QueryProvider>
       </body>
